@@ -15,33 +15,33 @@
 //Review
 
 //1 
-//a
+//a  6 numbers, starting from 0 (no user input) 
 for (let i = 0; i <= 6; i++) {
     console.log(i);
 }
-//b
+//b  n​ numbers, starting from 0, ​n​ entered by user 
 let n = Number(prompt('input num '));
 for (let i = 0; i < n; i++) {
     console.log(i);
 }
-//c
+//c  A sequence of numbers, starting from 3, ending before ​n​, ​n​ entered by user 
 let n = Number(prompt('input num '));
 for (let i = 3; i < n; i++) {
     console.log(i);
 }
-//d
+//d   A sequence of numbers, starting from ​c​, ending before ​n​, ​c​ and ​n​ entered by user 
 let c = Number(prompt('input num start'));
 let n = Number(prompt('input num end'));
 for (let i = c; i < n; i++) {
     console.log(i);
 }
-//e
+//e   A sequence of numbers, starting from ​c​, ending before ​n​, stepping by 3, ​c​ and ​n entered by user 
 let c = Number(prompt('input num start'));
 let n = Number(prompt('input num end'));
 for (let i = c; i < n; i += 3) {
     console.log(i);
 }
-//f
+//f  A sequence of numbers, starting from ​c​, ending before ​n​, stepping by ​s​. ​c​, ​n​ and s​ entered by user 
 let c = Number(prompt('input num start'));
 let n = Number(prompt('input num end'));
 let s = Number(prompt('input step'));
@@ -49,7 +49,7 @@ for (let i = c; i < n; i += s) {
     console.log(i);
 }
 
-// 4
+// 4  Write a program asking users their age, and then decide if they are old enough to view a 14+ content 
 let age = Number(prompt('How old are you : '));
 if (age <= 14) {
     alert('you are not old enough to watch');
@@ -57,14 +57,15 @@ if (age <= 14) {
     alert('enjoy');
 }
 
-//5
+//5  Write a program asking user to enter a number, ​x​, then check if ​x​ is in the lower half or higher half of 0 - 9 range 
+ 
 let num = Number(prompt('Enter number: '));
 if (num < 4.5) {
     alert('lower half of 9');
 } else {
     alert('higher half of 9');
 }
-//6
+//6  Write a program asking user to enter two numbers, ​x​ and ​n​, then check if ​x​ is in lower half or higher half of ​n 
 let x = Number(prompt('Enter x = '));
 let n = Number(prompt('Enter n = '));
 if (x < n / 2) {
@@ -72,7 +73,7 @@ if (x < n / 2) {
 } else {
     alert(x + ' is higher than half of ' + n);
 }
-//7
+//7  Write a script to check if a number is even (divisible by 2) or odd number
 let x = Number(prompt('Enter x = '));
 if (x % 2 == 0) {
     alert(x + ' is an even');
@@ -80,7 +81,7 @@ if (x % 2 == 0) {
     alert(x + ' is an odd');
 }
 //8
-// a
+// a- 6 L’s and H’s, half L’s, half H’s ​(L means low, H means high) 
 
 for (let i = 0; i < 3; i++) {
     console.log('L');
@@ -90,7 +91,7 @@ for (let i = 0; i < 3; i++) {
 
 }
 
-//b
+//b - n​ L’s and H’s in total, n entered by user 
 let x = Number(prompt('Enter x = '));
 
 for (let i = 0; i < x / 2; i++) {
@@ -100,7 +101,8 @@ for (let i = 0; i < Math.floor(x / 2); i++) {
     console.log('H');
 }
 
-// c
+//c - 8 1’s and 0’s in total, consecutively 
+
 for (let i = 0; i < 8; i++) {
     if (i % 2 == 0) {
         console.log('0');
@@ -109,7 +111,7 @@ for (let i = 0; i < 8; i++) {
     }
 }
 
-//d
+//d - n​ 1’s and 0’s in total, consecutively, ​n​ entered by user 
 let x = Number(prompt('Enter x = '));
 
 for (let i = 0; i < x; i++) {
@@ -120,7 +122,7 @@ for (let i = 0; i < x; i++) {
     }
 }
 
-//9
+//9 - the BMI 
 let w = Number(prompt(' enter your weight(kg):'));
 let h = Number(prompt(' enter your height (cm):'));
 h = h / 100;
