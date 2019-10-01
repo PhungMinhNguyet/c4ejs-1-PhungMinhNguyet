@@ -231,12 +231,19 @@ if (numPo >= 1) {
                 }
 
                 if (numPo >= 5) {
+
                     for (let i = 0; i < 3; i++) {
                         color('red');
                         rt(120);
                         fd(60);
                     }
+                  if(numPo > 5){
+                    lt(60);
+                  }
+                  
+                 
                 }
+              
             }
         }
 
