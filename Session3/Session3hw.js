@@ -92,9 +92,9 @@ for (let i = 0; i < inputNo.length; i++) {
 alert(' The smallest num is ' + min);
 
 //7: Searching number
-
-const​​ arr​ = [3​, 4, ​6, -9​, 10​, -88​, 2​];
+// bài này lỗi í ạ em mãi chả hiểu =((
 let inputNo = Number(prompt('ENTER a number'));
+const​​ arr​ = [3​, 4, ​6, -9​, 10​, -88​, 2​];
 for (let i = 0; i < arr.length; i++) {
     if (inputNo == arr[i]) {
         alert(inputNo + ' is FOUND in my array at index' + i);
@@ -103,7 +103,8 @@ for (let i = 0; i < arr.length; i++) {
     }
 }
 
-//8
+
+//8 flockSizeOfSheep 
 let flockSizeOfSheep = [5, 7, 300, 90, 24, 50, 75];
 let flockSizeOfSheepz = flockSizeOfSheep.join(' ');
 console.log(`HEllO,Im PMN and here is my sheep sizes:\n ${flockSizeOfSheepz}`);
@@ -158,7 +159,7 @@ console.log(`My flock has sizes in total: ${totalSize}
               I would get ${totalSize} * 2$ = ${moneyEarned}`);
 
 // Turtle
-// Em chưa làm đổi màu đc ạ =(
+// Em chưa làm đổi màu đc ạ = (
 
 const​​ colors​ = [​'red'​, ​'gray'​, ​'blue'​, ​'purple'​, ​'cyan']
 let times = Number(prompt('ENTER a number of shapes'));
@@ -169,4 +170,25 @@ for (let j = 0; j < times; j++) {
         fd(size);
         rt(90);
     }
+}
+
+//Optional1
+let listName = prompt(' Enter a list of name separated by commas(,)');
+listName = listName.split(',');
+let arrName = []
+for (let i = 0; i < listName.length; i++) {
+    arrName.push(`<${listName[i]}>`);
+}
+alert(` ${listName} => ${arrName}`);
+
+//Optional2
+
+let listNum = prompt(' Enter a list of Number ,separated by commas(,)');
+listNum = listNum.split(',');
+let arrNum = []
+for (let i = 0; i < listNum.length; i++) {
+    if (Number(listNum[i]) % 2 !== 0) {
+        arrNum.push(listNum[i]);
+    }
+
 }
