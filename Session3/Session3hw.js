@@ -175,7 +175,7 @@ for (let j = 0; j < times; j++) {
 //Optional1
 let listName = prompt(' Enter a list of name separated by commas(,)');
 listName = listName.split(',');
-let arrName = []
+let arrName = [];
 for (let i = 0; i < listName.length; i++) {
     arrName.push(`<${listName[i]}>`);
 }
@@ -185,7 +185,7 @@ alert(` ${listName} => ${arrName}`);
 
 let listNum = prompt(' Enter a list of Number ,separated by commas(,)');
 listNum = listNum.split(',');
-let arrNum = []
+let arrNum = [];
 for (let i = 0; i < listNum.length; i++) {
     if (Number(listNum[i]) % 2 !== 0) {
         arrNum.push(listNum[i]);
