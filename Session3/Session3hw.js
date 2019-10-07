@@ -91,7 +91,7 @@ for (let i = 0; i < inputNo.length; i++) {
 }
 alert(' The smallest num is ' + min);
 
-7: Searching number
+//7: Searching number
 
 const​​ arr​ = [3​, 4, ​6, -9​, 10​, -88​, 2​];
 let inputNo = Number(prompt('ENTER a number'));
@@ -152,6 +152,7 @@ let totalSize = 0;
 for (let i = 0; i < flockSizeOfSheep.length; i++) {
     totalSize += Number(flockSizeOfSheep[i]);
 }
+
 let moneyEarned = totalSize * 2;
 console.log(`My flock has sizes in total: ${totalSize}
               I would get ${totalSize} * 2$ = ${moneyEarned}`);
