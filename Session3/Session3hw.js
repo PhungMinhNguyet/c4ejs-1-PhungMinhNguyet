@@ -23,54 +23,66 @@ const a = [4, 5, 7, -8];
 console.log(...a);
 
 //4. Simulating a clothes shop
+
 let re = prompt('Hi there, welcome to shop admin panel, what do u want (C,R,U,D)');
-re = re.toUpperCase();
+
 let listItems = ['Jeans', 'T - shirt', 'Socks'];
-if (re == 'C' || re == 'R' || re == 'U' || re == 'D') {
-    if (re == 'C') {
-        let add = prompt('Enter the name of the newe Item:');
-        listItems.push(add);
-        alert('done');
-        re = prompt('Hi there, welcome to shop admin panel, what do u want (C,R,U,D)');
+for (;;) {
+    re = re.toUpperCase();
+    if (re == 'EXIT' || re == 'X') {
+        break;
+    } else {
 
-    }
+        if (re == 'C' || re == 'R' || re == 'U' || re == 'D') {
+            if (re == 'C') {
+                let add = prompt('Enter the name of the newe Item:');
+                listItems.push(add);
+                alert('done');
+                re = prompt('Hi there, welcome to shop admin panel, what do u want (C,R,U,D)');
 
-    if (re == 'U') {
-        let updateNum = prompt('Enter the position u want to update:');
-        for (let i = 0; i < listItems.length; i++) {
-            if ((i + 1) == updateNum) {
-                let newUp = prompt('Enter the name of the newe Item:');
-                listItems[i] = newUp;
-                alert('okay done!');
             }
-        }
-        re = prompt('Hi there, welcome to shop admin panel, what do u want (C,R,U,D)');
 
-    }
-    if (re == 'D') {
-        let deNo = prompt('enter the pos u wanna delete');
-        for (let i = 0; i < listItems.length; i++) {
-            if (deNo == i + 1) {
-                listItems.splice(i, 1);
+            if (re == 'U') {
+                let updateNum = prompt('Enter the position u want to update:');
+                for (let i = 0; i < listItems.length; i++) {
+                    if ((i + 1) == updateNum) {
+                        let newUp = prompt('Enter the name of the newe Item:');
+                        listItems[i] = newUp;
+                        alert('okay done!');
+                    }
+                }
+                re = prompt('Hi there, welcome to shop admin panel, what do u want (C,R,U,D)');
+
             }
-        }
-        re = prompt('Hi there, welcome to shop admin panel, what do u want (C,R,U,D)');
-    }
-    if (re == 'R') {
-        let listItemsf = [];
-        for (let i = 0; i < listItems.length; i++) {
+            if (re == 'D') {
+                let deNo = prompt('enter the pos u wanna delete');
+                for (let i = 0; i < listItems.length; i++) {
+                    if (deNo == i + 1) {
+                        listItems.splice(i, 1);
+                    }
+                }
+                re = prompt('Hi there, welcome to shop admin panel, what do u want (C,R,U,D)');
+            }
+            if (re == 'R') {
+                let listItemsf = [];
+                for (let i = 0; i < listItems.length; i++) {
 
-            listItemsf.push(`\n ${i + 1} : ${listItems[i]} `);
-        }
-        alert('The current Items are: ' + listItemsf);
-    }
+                    listItemsf.push(`\n ${i + 1} : ${listItems[i]} `);
+                }
+                alert('The current Items are: ' + listItemsf);
+                re = prompt('Hi there, welcome to shop admin panel, what do u want (C,R,U,D)');
 
-} else {
-    alert(' This command is not supported ');
-    re = prompt('Hi there, welcome to shop admin panel, what do u want (C,R,U,D)');
+            }
+
+
+        } else {
+            alert(' This command is not supported ');
+            re = prompt('Hi there, welcome to shop admin panel, what do u want (C,R,U,D)');
+
+        }
+    }
 
 }
-
 //5 Sum 
 let inputNo = prompt('ENTER a sequence of Number,separated by commas(,)');
 inputNo = inputNo.split(",");
