@@ -6,7 +6,7 @@
 //  Variable declared in a block with the let is only available for use within that block   
 //  and var is available for use in the whole window. 
 // 3. let can be re-declared and const can not
-// 4.
+
 
 /// Boolean
 // 1- Boolean is a varialble that have only 2 values : True or false;
@@ -237,13 +237,13 @@ if (numPo >= 1) {
                         rt(120);
                         fd(60);
                     }
-                  if(numPo > 5){
-                    lt(60);
-                  }
-                  
-                 
+                    if (numPo > 5) {
+                        lt(60);
+                    }
+
+
                 }
-              
+
             }
         }
 
