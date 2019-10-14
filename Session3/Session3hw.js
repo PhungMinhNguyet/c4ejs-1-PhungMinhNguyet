@@ -173,10 +173,12 @@ console.log(`My flock has sizes in total: ${totalSize}
 // Turtle
 // Em chưa làm đổi màu đc ạ = (
 
-const​​ colors​ = [​'red'​, ​'gray'​, ​'blue'​, ​'purple'​, ​'cyan']
+const colors = ['red', 'gray', 'blue', 'purple', 'cyan'];
 let times = Number(prompt('ENTER a number of shapes'));
 let size = 20;
-for (let j = 0; j < times; j++) {
+
+for (let k = 0; k < times; k++) {
+    color(colors[k]);
     size += 20;
     for (let i = 0; i < 4; i++) {
         fd(size);
