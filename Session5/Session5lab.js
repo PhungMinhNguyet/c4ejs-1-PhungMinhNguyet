@@ -79,9 +79,9 @@
         // alert(` your correct answer is ${sum} of 3`);
         //____________________________________________________________________________
 
-        ////PART2
+        //PART2
 
-        //   //1
+        //1
         let listOfWords = ['to', 'be', 'that', 'of', 'elon', 'to', 'this', 'now', 'back', 'cool', 'hey', 'love', 'of', 'life',
             'that', 'rain', 'summer', 'color', 'now', 'of', 'hat', 'late', 'sorry', 'my', 'team'
         ];
@@ -139,22 +139,33 @@
                 quantity: 4,
             }, ]
 
-
         };
-        console.log(inventoryByBrand);
-        // let inputBrand = prompt('Which brand:');
-        // inputBrand.toLowerCase;
-        // let sum = 0;
-        // for (let i = 0; i < inventoryByBrand.dell.length; i++) {
-        //     alert(inventoryByBrand.dell);
-        //     // sum += 1;
-        // }
 
-        // if (inputBrand == inventoryByBrand.inputBrand) {
-        //     
-        //     
-        //        
-        //     }
-        //     alert(`There are ${sum} generators of ' ${inputBrand.toUpperCase}' in inventory `);
 
-        // }
+        let list = [];
+        let inputBrand = prompt('Which brand:');
+        inputBrand.toLowerCase;
+        let total = 0;
+        for (let i = 0; i < inventoryByBrand[inputBrand].length; i++) {
+            list.push(inventoryByBrand[inputBrand][i].name);
+            total += Number(inventoryByBrand[inputBrand][i].price) * Number(inventoryByBrand[inputBrand][i].quantity);
+        }
+        let stringList = '';
+        for (let i = 0; i < list.length; i++) {
+            stringList += ` \n${list[i]}`;
+        }
+        total = total * 10000;
+        total = total.toString();
+        let h = '';
+        for (let i = 1; i < total.length; i++) {
+            h += total[i - 1];
+
+            if (i % 3 == 0) {
+
+                h += ".";
+            }
+        }
+
+        alert(`There are ${inventoryByBrand[inputBrand].length} generators of ' ${inputBrand}' in inventory:
+            ${stringList}\n with total value: ${h}VND
+             `);

@@ -1,0 +1,45 @@
+.menu {
+    font-weight: bold;
+    background-color: #D5B0AC;
+    color: #402E2A;
+    padding: center;
+}
+
+span {
+    height: 30px;
+    width: 100px;
+    padding: 30px;
+}
+
+nav {
+    text-align: center;
+}
+
+span:hover {
+    color: #FFFFFF;
+    background-color: #9CD08F;
+    cursor: pointer;
+}
+
+.menu_vertical {
+    font-weight: bold;
+    background-color: #D5B0AC;
+    color: #402E2A;
+    padding: center;
+}
+
+.menu_vertical span {
+    height: 30px;
+    width: 100px;
+    display: list-item;
+}
+
+.menu_vertical nav {
+    text-align: center;
+}
+
+.menu_vertical span:hover {
+    color: #FFFFFF;
+    background-color: #9CD08F;
+    cursor: pointer;
+}
