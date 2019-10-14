@@ -2,17 +2,14 @@
     font-weight: bold;
     background-color: #D5B0AC;
     color: #402E2A;
-    padding: center;
+    text-align: center;
 }
 
 span {
     height: 30px;
     width: 100px;
-    padding: 30px;
-}
-
-nav {
-    text-align: center;
+    padding: 2px;
+    display: inline-block;
 }
 
 span:hover {
@@ -25,13 +22,15 @@ span:hover {
     font-weight: bold;
     background-color: #D5B0AC;
     color: #402E2A;
-    padding: center;
+    width: fit-content;
+    text-align: center;
 }
 
 .menu_vertical span {
     height: 30px;
     width: 100px;
-    display: list-item;
+    display: grid;
+    border-bottom: 2px solid white;
 }
 
 .menu_vertical nav {
