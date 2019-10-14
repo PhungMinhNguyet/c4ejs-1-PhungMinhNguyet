@@ -82,18 +82,18 @@
         //PART2
 
         //1
-        let listOfWords = ['to', 'be', 'that', 'of', 'elon', 'to', 'this', 'now', 'back', 'cool', 'hey', 'love', 'of', 'life',
-            'that', 'rain', 'summer', 'color', 'now', 'of', 'hat', 'late', 'sorry', 'my', 'team'
-        ];
-        for (let i = 0; i < listOfWords.length; i++) {
-            let sum = 1;
-            for (let j = i + 1; j < listOfWords.length; j++) {
-                if (listOfWords[i] == listOfWords[j]) {
-                    sum += 1;
-                }
-            }
-            console.log(` ${listOfWords[i]}:${sum}\n`);
-        }
+        // let listOfWords = ['to', 'be', 'that', 'of', 'elon', 'to', 'this', 'now', 'back', 'cool', 'hey', 'love', 'of', 'life',
+        //     'that', 'rain', 'summer', 'color', 'now', 'of', 'hat', 'late', 'sorry', 'my', 'team'
+        // ];
+        // for (let i = 0; i < listOfWords.length; i++) {
+        //     let sum = 1;
+        //     for (let j = i + 1; j < listOfWords.length; j++) {
+        //         if (listOfWords[i] == listOfWords[j]) {
+        //             sum += 1;
+        //         }
+        //     }
+        //     console.log(` ${listOfWords[i]}:${sum}\n`);
+        // }
 
         //2-3-4 
         const inventoryByBrand = {
@@ -143,9 +143,10 @@
 
 
         let list = [];
-        let inputBrand = prompt('Which brand:');
-        inputBrand.toLowerCase;
         let total = 0;
+        let inputBrand = prompt('Which brand:');
+
+
         for (let i = 0; i < inventoryByBrand[inputBrand].length; i++) {
             list.push(inventoryByBrand[inputBrand][i].name);
             total += Number(inventoryByBrand[inputBrand][i].price) * Number(inventoryByBrand[inputBrand][i].quantity);
@@ -167,5 +168,5 @@
         }
 
         alert(`There are ${inventoryByBrand[inputBrand].length} generators of ' ${inputBrand}' in inventory:
-            ${stringList}\n with total value: ${h}VND
+            ${stringList}\nwith total value: ${h}VND
              `);
