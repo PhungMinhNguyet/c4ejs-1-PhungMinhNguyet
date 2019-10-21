@@ -81,12 +81,44 @@
 
         // //PART2
 
-        // //1
-        // let listOfWords = ['to', 'be', 'that', 'of', 'elon', 'to', 'this', 'now', 'back', 'cool', 'hey', 'love', 'of', 'life',
-        //     'that', 'rain', 'summer', 'color', 'now', 'of', 'hat', 'late', 'sorry', 'my', 'team'
-        // ];
+        //1
+        let listOfWords = {
+            to: 1,
+            be: 1,
+            that: 1,
+            of: 1,
+            elon: 1,
+            to: 1,
+            this: 1,
+            no: 1,
+            back: 1,
+            cool: 1,
+            hey: 1,
+            love: 1,
+            of: 1,
+            life: 1,
+            that: 1,
+            rain: 1,
+            summer: 1,
+            color: 1,
+            now: 1,
+            of: 1,
+            hat: 1,
+            late: 1,
+            sorry: 1,
+            my: 1,
+            team: 1
+        };
+
+        for (x in listOfWords) {
+            if (lis)
+        }
+
+
+
+
         // for (let i = 0; i < listOfWords.length; i++) {
-        //     let sum = 1;
+        //     let sum = 0;
         //     for (let j = i + 1; j < listOfWords.length; j++) {
         //         if (listOfWords[i] == listOfWords[j]) {
         //             sum += 1;
@@ -95,78 +127,78 @@
         //     console.log(` ${listOfWords[i]}:${sum}\n`);
         // }
 
-        //2-3-4 
-        const inventoryByBrand = {
+        // //2-3-4 
+        // const inventoryByBrand = {
 
-            dell: [
+        //     dell: [
 
-                {
-                    name: 'Dell XPS 9370',
-                    price: 30000,
-                    brand: 'Dell',
-                    quantity: 1,
-                },
-                {
-                    name: 'Dell Inspiron 3567',
-                    price: 9300,
-                    brand: 'Dell',
-                    quantity: 12,
-                },
-                {
-                    name: 'Dell Latitude E5450',
-                    price: 8600,
-                    brand: 'Dell',
-                    quantity: 2,
-                },
-            ],
-            hp: [{
-                    name: 'HP Pavilion',
-                    brand: 'HP',
-                    price: 4000,
-                    quantity: 7,
-                },
-                {
-                    name: 'HP Envy 13aq',
-                    price: 21000,
-                    brand: 'HP',
-                    quantity: 5,
-                },
-            ],
-            asus: [{
-                name: 'Asus Zenbook',
-                brand: 'Asus',
-                price: 20000,
-                quantity: 4,
-            }, ]
+        //         {
+        //             name: 'Dell XPS 9370',
+        //             price: 30000,
+        //             brand: 'Dell',
+        //             quantity: 1,
+        //         },
+        //         {
+        //             name: 'Dell Inspiron 3567',
+        //             price: 9300,
+        //             brand: 'Dell',
+        //             quantity: 12,
+        //         },
+        //         {
+        //             name: 'Dell Latitude E5450',
+        //             price: 8600,
+        //             brand: 'Dell',
+        //             quantity: 2,
+        //         },
+        //     ],
+        //     hp: [{
+        //             name: 'HP Pavilion',
+        //             brand: 'HP',
+        //             price: 4000,
+        //             quantity: 7,
+        //         },
+        //         {
+        //             name: 'HP Envy 13aq',
+        //             price: 21000,
+        //             brand: 'HP',
+        //             quantity: 5,
+        //         },
+        //     ],
+        //     asus: [{
+        //         name: 'Asus Zenbook',
+        //         brand: 'Asus',
+        //         price: 20000,
+        //         quantity: 4,
+        //     }, ]
 
-        };
+        // };
 
 
-        let list = [];
-        let total = 0;
-        let inputBran = prompt('Which brand:');
-        let inputBrand = inputBran.toLowerCase();
+        // let list = [];
+        // let total = 0;
+        // let inputBran = prompt('Which brand:');
+        // let inputBrand = inputBran.toLowerCase();
 
-        for (let i = 0; i < inventoryByBrand[inputBrand].length; i++) {
-            list.push(inventoryByBrand[inputBrand][i].name);
-            total += Number(inventoryByBrand[inputBrand][i].price) * Number(inventoryByBrand[inputBrand][i].quantity);
-        }
-        let stringList = '';
-        for (let i = 0; i < list.length; i++) {
-            stringList += ` \n${list[i]}`;
-        }
-        total = total * 10000;
-        total = total.toString();
-        let h = '';
-        for (let i = 1; i < total.length; i++) {
-            h += total[i - 1];
+        // for (let i = 0; i < inventoryByBrand[inputBrand].length; i++) {
+        //     list.push(inventoryByBrand[inputBrand][i].name);
+        //     total += Number(inventoryByBrand[inputBrand][i].price) * Number(inventoryByBrand[inputBrand][i].quantity);
+        // }
+        // let stringList = '';
+        // for (let i = 0; i < list.length; i++) {
+        //     stringList += ` \n${list[i]}`;
+        // }
+        // total = total * 10000;
+        // total = total.toString();
+        // let h = '';
+        // for (let i = 1; i < total.length; i++) {
+        //     h += total[i - 1];
 
-            if (i % 3 == 0) {
+        //     if (i % 3 == 0) {
 
-                h += ".";
-            }
-        }
-        inputBrand.toUpperCase();
-        alert(`There are ${inventoryByBrand[inputBrand].length} generators of ' ${inputBrand}' in inventory:
-            ${stringList}\nwith total value: ${h}VND
-             `);
+        //         h += ".";
+        //     }
+        // }
+        // inputBrand.toUpperCase();
+        // alert(`There are ${inventoryByBrand[inputBrand].length} generators of ' ${inputBrand}' in inventory:
+        //     ${stringList}\nwith total value: ${h}VND
+        //      `);
