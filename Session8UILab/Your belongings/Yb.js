@@ -14,17 +14,7 @@ function showList() {
         item.insertAdjacentHTML('beforeend', `<li><span> ${items[i]} <button class="btn_remove">Remove</button></span></li> </br>`);
     }
 }
-
-
-let btnRemoves = document.getElementsByClassName("btn_remove");
-for (let i = 0; i < btnRemoves.length; i++) {
-    let btn_clicked = btnRemoves[i];
-    btn_clicked.addEventListener('click', () => {
-        console.log("remove");
-    });
-
-}
-
+showList();
 
 function insertItem() {
     let newI = document.getElementById("newItem").value;
@@ -42,9 +32,16 @@ function onBtnAdd() {
     resetInput();
 
 }
+
+
+let btnRemoves = document.getElementsByClassName("btn_remove");
+for (let i = 0; i < btnRemoves.length; i++) {
+    let btn_clicked = btnRemoves[i];
+    btn_clicked.addEventListener('click', () => {
+        console.log("remove");
+        console.log("item ", i);
+        items.splice(i, 1);
+
+    });
+}
 console.log(items);
-
-
-
-
-showList();
