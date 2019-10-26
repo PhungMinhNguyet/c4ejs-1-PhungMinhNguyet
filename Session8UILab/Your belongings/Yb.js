@@ -10,8 +10,7 @@ btn.addEventListener('click', onBtnAdd);
 
 function showList() {
     for (let i = 0; i < items.length; i++) {
-
-        item.insertAdjacentHTML('beforeend', `<li><span> ${items[i]} <button class="btn_remove">Remove</button></span></li> </br>`);
+        item.insertAdjacentHTML('beforeend', `<li><span> ${items[i]} <button class="btn_remove">Remove</button></span></li>`);
     }
 }
 showList();
@@ -19,7 +18,9 @@ showList();
 function insertItem() {
     let newI = document.getElementById("newItem").value;
     items.push(newI);
-    item.insertAdjacentHTML('beforeend', `<li><span> ${newI} <button class="btn_remove" >Remove</button></span></li> </br>`);
+    console.log("items = ", items);
+    item.insertAdjacentHTML('beforeend', `<li><span> ${newI} <button class="btn_remove" >Remove</button></span></li>`);
+    delete_btn()
 }
 
 function resetInput() {
@@ -34,14 +35,18 @@ function onBtnAdd() {
 }
 
 
-let btnRemoves = document.getElementsByClassName("btn_remove");
-for (let i = 0; i < btnRemoves.length; i++) {
-    let btn_clicked = btnRemoves[i];
-    btn_clicked.addEventListener('click', () => {
-        console.log("remove");
-        console.log("item ", i);
-        items.splice(i, 1);
-
-    });
+function delete_btn() {
+    let btnRemoves = document.getElementsByClassName("btn_remove");
+    for (let i = 0; i < btnRemoves.length; i++) {
+        let btn_clicked = btnRemoves[i];
+        btn_clicked.addEventListener('click', () => {
+            console.log("remove");
+            console.log("item ", i);
+            let span = btn_clicked.parentNode;
+            let li = span.parentNode
+            li.remove();
+            console.log(items);
+        });
+    }
 }
-console.log(items);
+delete_btn()
