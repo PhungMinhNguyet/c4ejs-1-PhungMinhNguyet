@@ -11,14 +11,25 @@ btn.addEventListener('click', onBtnAdd);
 function showList() {
     for (let i = 0; i < items.length; i++) {
 
-        item.insertAdjacentHTML('beforeend', `<li><span> ${items[i]} <button onclick="onBtnRemove()">Remove</button></span></li> </br>`);
+        item.insertAdjacentHTML('beforeend', `<li><span> ${items[i]} <button class="btn_remove">Remove</button></span></li> </br>`);
     }
 }
+
+
+let btnRemoves = document.getElementsByClassName("btn_remove");
+for (let i = 0; i < btnRemoves.length; i++) {
+    let btn_clicked = btnRemoves[i];
+    btn_clicked.addEventListener('click', () => {
+        console.log("remove");
+    });
+
+}
+
 
 function insertItem() {
     let newI = document.getElementById("newItem").value;
     items.push(newI);
-    item.insertAdjacentHTML('beforeend', `<li><span> ${newI} <button onclick="onBtnRemove()">Remove</button></span></li> </br>`);
+    item.insertAdjacentHTML('beforeend', `<li><span> ${newI} <button class="btn_remove" >Remove</button></span></li> </br>`);
 }
 
 function resetInput() {
@@ -33,12 +44,7 @@ function onBtnAdd() {
 }
 console.log(items);
 
-function onBtnRemove(i) {
-    console.log("removed");
-    for (let i = 0; i < items; i++) {
-        console.log("Item :", i);
-    }
-}
+
 
 
 showList();
